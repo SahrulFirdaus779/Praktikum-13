@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi Mata Uang ke Rupiah</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <fieldset class="container">
+     <legend>Konversi Mata Uang ke Rupiah</legend>
+
+      <table border="1">
+        <tr>
+          <th>Nilai Mata Uang Asing</th>
+          <th>Valas</th>
+          <th>Nilai Rupiah</th>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="number"
+              id="jumlahUang"
+              onchange="konversiMataUang()"
+            />
+          </td>
+          <td>
+            <select id="valas" onchange="konversiMataUang()">
+              <option value="USD">Dollar US</option>
+              <option value="SGD">Dollar Singapore</option>
+              <option value="MYR">Ringgit Malaysia</option>
+              <option value="JPY">Yen Jepang</option>
+              <option value="EUR">Euro</option>
+              <option value="SAR">Riyal Arab Saudi</option>
+            </select>
+          </td>
+          <td><input type="text" id="hasilRupiah" readonly /></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <script>
+      function konversiMataUang() {
+        let mataUang = document.getElementById("valas").value;
+        let jumlahUang = parseFloat(
+          document.getElementById("jumlahUang").value
+        );
+
+        let nilaiTukar = 0;
+
+        // Mendapatkan nilai tukar berdasarkan mata uang yang dipilih
+        switch (mataUang) {
+          case "USD":
+            nilaiTukar = 9915; // 1 Dollar US = 9915 Rupiah
+            break;
+          case "SGD":
+            nilaiTukar = 13472; // 1 Dollar Singapore = 13472 Rupiah
+            break;
+          case "MYR":
+            nilaiTukar = 874; // 1 Ringgit Malaysia = 874 Rupiah
+            break;
+          case "JPY":
+            nilaiTukar = 120; // 1 Yen Jepang = 120 Rupiah
+            break;
+          case "EUR":
+            nilaiTukar = 15888; // 1 Euro = 15888 Rupiah
+            break;
+          case "SAR":
+            nilaiTukar = 3592; // 1 Riyal Arab Saudi = 3592 Rupiah
+            break;
+          default:
+            nilaiTukar = 1; // Nilai default jika tidak ada mata uang yang dipilih
+        }
+
+        // Menghitung nilai Rupiah berdasarkan nilai mata uang asing yang dimasukkan
+        let hasilKonversi = jumlahUang * nilaiTukar;
+
+        // Menampilkan hasil konversi di kotak nilai Rupiah
+        document.getElementById("hasilRupiah").value = hasilKonversi;
+      }
+    </script>
+  </body>
+</html>

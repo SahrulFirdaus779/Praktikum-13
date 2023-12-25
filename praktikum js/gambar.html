@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menampilkan gambar</title>
+  </head>
+  <body align="center" style="background-color: #1dbf73;">
+    <h1>Gambar Hewan</h1>
+    <br>
+    <select id="select" onchange="gambar()">
+      <option hidden></option>
+      <option value="1">Ayam</option>
+      <option value="2">Bebek</option>
+      <option value="3">Capung</option>
+      <option value="4">Domba</option>
+      <option value="5">Elang</option>
+      <option value="6">Flamingo</option>
+      <option value="7">Gajah</option>
+      <option value="8">Hamster</option>
+      <option value="9">Iguana</option>
+      <option value="10">jerapah</option>
+    </select>
+    <span id="gambar"></span>
+
+    <script>
+      function gambar() {
+        let pilih = document.getElementById("select").value;
+        if (pilih == "1") {
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Red_Jungle_Fowl_%287856592664%29.jpg/250px-Red_Jungle_Fowl_%287856592664%29.jpg">';
+          alert("Ayam");
+        } else if (pilih == "2") {
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/White_domesticated_duck%2C_stretching.jpg/220px-White_domesticated_duck%2C_stretching.jpg">';
+          alert("Bebek");
+        } else if (pilih == "3") {
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Sympetrum_flaveolum_-_side_%28aka%29.jpg/250px-Sympetrum_flaveolum_-_side_%28aka%29.jpg">';
+          alert("Capung");
+        } else if (pilih == "4") {
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Dolly_face_closeup.jpg/220px-Dolly_face_closeup.jpg">';
+          alert("Domba");
+        } else if (pilih == "5") {
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Haliaeetus_albicilla%2C_Mull_1.jpg/220px-Haliaeetus_albicilla%2C_Mull_1.jpg">';
+          alert("Elang");
+        } else if (pilih == "6") {
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Lightmatter_flamingo.jpg/250px-Lightmatter_flamingo.jpg">';
+          alert("Flamingo");
+        } else if (pilih == "7") {
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Elephas_maximus_%28Bandipur%29.jpg/220px-Elephas_maximus_%28Bandipur%29.jpg">';
+          alert("Gajah");
+        } else if (pilih == "8"){
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Dwarf_hamster_Minica.jpg/200px-Dwarf_hamster_Minica.jpg">';
+          alert("Hamster");
+        } else if (pilih == "9"){
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Iguana_iguana.jpg/250px-Iguana_iguana.jpg">';
+          alert("Iguana");
+        } else if (pilih == "10"){
+          document.getElementById("gambar").innerHTML =
+            '<br><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Jirafa_Noreste_Mexico.jpg/220px-Jirafa_Noreste_Mexico.jpg">';
+          alert("Jerapah");
+        }  
+      }
+    </script>
+  </body>
+</html>

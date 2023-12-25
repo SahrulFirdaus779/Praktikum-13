@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        document.getElementById("buatdata").innerHTML =
+          '<table id="data"><tr><th>Username</th><td><span id="Namapengguna">' +
+          username +
+          '</span></td></tr><tr><th>Email</th><td><span id="emailpengguna">' +
+          email +
+          '</span></td></tr><tr><th>Jam Pemberangkatan</th><td><span id="jambernagkat">' +
+          jam_pemberangkatan +
+          '</span></td></tr> <tr><th>Tujuan Pemberangkatan</th><td><span id="tujuanberangkat">' +
+          Tujuan_pemberangkatan +
+          '</span></td></tr><tr><th>Jumlah Tiket</th><td><span id="jumlahtiket">' +
+          Jumlah_tiket +
+          "</span></td></tr>";
+        document.getElementById("error1").textContent = "";
+        document.getElementById("error2").textContent = "";
+        document.getElementById("error3").textContent = "";
+        document.getElementById("error4").textContent = "";
+        document.getElementById("error5").textContent = "";
+    </script>
+</body>
+</html>

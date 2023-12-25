@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbox</title>
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <!-- Chatbox -->
+    <div class="chat-container">
+      <div class="chat-box" id="kotakObrolan">
+        <div class="pesan-obrolan" id="pesanObrolan"></div>
+        <input
+          onchange="kirimPesan()"
+          type="text"
+          id="inputPesan"
+          placeholder="Tulis pesan..."
+        />
+        <button>Kirim</button>
+      </div>
+    </div>
+    <script>
+        function kirimPesan() {
+          let inputPesan = document.getElementById("inputPesan");
+          let pesanObrolan = document.getElementById("pesanObrolan");
+  
+          let teksPesan = inputPesan.value;
+  
+          if (teksPesan.trim() !== "") {
+            let pesanBaru = document.createElement("div");
+            pesanBaru.textContent = teksPesan;
+            pesanBaru.classList.add("pesan");
+  
+            pesanObrolan.appendChild(pesanBaru);
+            pesanObrolan.scrollTop = pesanObrolan.scrollHeight; // Auto-scroll ke pesan terbaru
+  
+            inputPesan.value = ""; // Reset input setelah pesan dikirim
+          }
+        }
+      </script>
+  </body>
+</html>
